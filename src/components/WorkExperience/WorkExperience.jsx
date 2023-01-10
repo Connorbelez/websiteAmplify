@@ -22,7 +22,7 @@ const hds = [
 
 
 
-export const About = () => {
+export const WorkExperience = () => {
 
     const [topic, setTopic] = useState("Intro");
 
