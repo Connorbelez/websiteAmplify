@@ -5,36 +5,57 @@ import ChannelBar from '../ChannelBar/CB';
 import TopNavigation from '../TopNavigation/TopNav';
 // import {ContentContainer, ContentContainer1} from '../MainView/Utility';
 import ContentContainer from './ContentContainer';
+import MainContainer from "../MainView/MainContainer";
+import {SideBar} from "../SideBar/SideBar";
 
 
 const hds = [
     {
-        h:"BlackBerry QNX F22",
-        s:["Term 1","Term 2"]
+        h:"About",
+        s:["Intro","My Journey"]
     },
     {
-        h:"BlackBerry QNX S22",
-        s:["Term 1","Term 2"]
-    },
-    {
-        h:"Carleton TA",
-        s:["1405 - Intro to CS","2406 - Web Dev"]
+        h:"Hobbies/ECs",
+        s:["Carleton Trap & Skeet Team","Classic Car/Bike Restoration","Miniature Painting & Tabletop","Philosophy"]
     }
 ]
 
 
 
-export const WorkExperience = () => {
+export const About = () => {
 
     const [topic, setTopic] = useState("Intro");
 
     return (
         <div className='main-container' id="MC">
-        
-            <ChannelBar channel={"About"} topic={topic} setTopic={setTopic} headers={hds}/>           
 
-            <ContentContainer topic={topic} setTopic={setTopic} ></ContentContainer>
-            
+
+
+
+            <div className="drawer drawer-mobile">
+                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+
+                <div className="drawer-content flex flex-col items-center justify-center">
+                    {/*<label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>*/}
+                    <ContentContainer topic={topic} setTopic={setTopic} ></ContentContainer>
+                    {/*<label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>*/}
+
+                </div>
+                <div className="drawer-side">
+                    <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+                    <ChannelBar channel={"About"} topic={topic} setTopic={setTopic} headers={hds}/>
+
+                </div>
+            </div>
+
+
+
+            {/*<ChannelBar channel={"About"} topic={topic} setTopic={setTopic} headers={hds}/>           */}
+
+            {/*<ContentContainer topic={topic} setTopic={setTopic} ></ContentContainer>*/}
+
+
+
         </div>
     )
 }

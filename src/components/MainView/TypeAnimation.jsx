@@ -2,7 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 export const ExampleComponent = () => {
   return (
-        <div >
+        <div className="overflow-hidden " >
 
             <TypeAnimation
                 sequence={[
@@ -22,7 +22,7 @@ export const ExampleComponent = () => {
                     4000,
 
                 ]}
-                wrapper="span"
+                wrapper="div"
                 cursor={true}
                 repeat={Infinity}
                 

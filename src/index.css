@@ -41,9 +41,9 @@ for brevity and code reusability*/
   }
 
   .main-container{
-    @apply flex
+    @apply flex flex-col
     h-full w-screen z-0
-    ml-16
+    ml-16 items-center
     overflow-hidden;
   }
 

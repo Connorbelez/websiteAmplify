@@ -74,6 +74,7 @@ return (
 
 const BottomBar = () => (
 <div className='bottom-bar'>
+    {/*<label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>*/}
     <PlusIcon />
     <input type='text' placeholder='Enter message...' className='bottom-bar-input' />
 </div>
@@ -101,10 +102,17 @@ const Post = ({ name, timestamp, text, id}) => {
 };
 
 const PlusIcon = () => (
-    <BsPlusCircleFill
-      size='22'
-      className='text-green-500 dark:shadow-lg mx-2 dark:text-primary'
-    />
+    <div>
+        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        <label htmlFor="my-drawer-2" className="drawer-button lg:hidden">
+            <BsPlusCircleFill
+            size='22'
+            className='text-green-500 dark:shadow-lg mx-2 dark:text-primary'
+            />
+        </label>
+
+    </div>
+
   );
   
 export default ContentContainer
