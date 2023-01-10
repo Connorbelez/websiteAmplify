@@ -6,6 +6,7 @@ import { BG } from './HomePage';
 import { ExampleComponent } from './TypeAnimation';
 import {About} from "../About/About";
 import TopNavigation from '../TopNavigation/TopNav';
+import {WorkExperience} from '../WorkExperience/WorkExperience';
 const MainContainer = (props) => {
   
     let cc = props.curComp
@@ -38,8 +39,7 @@ const MainContainer = (props) => {
       case "Work Experience 💡":
         return (
           <div className='main-container' id="MC">
-            <ChannelBar />            
-            <ContentContainer1></ContentContainer1>
+          <WorkExperience />
           </div>
       )
       case "Projects 💡":

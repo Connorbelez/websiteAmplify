@@ -20,13 +20,13 @@ import {
 
 import useDarkMode from '../../hooks/useDarkMode';
   
-const SideBar = (props) => {
+export const SideBar = (props) => {
     return (
         <div className="fixed top-0 h-screen w-16 
                         flex flex-col z-40
                         bg-gray-100 text-gray-900  
                         dark:bg-gray-900 dark:text-white 
-                        shadow-lg">
+                        shadow-lg ">
         <SideBarIcon className='z-1' icon={<FaFire size="28" />} text={"Home 💡"} callBack={props.pshOnClick}/>
         <Divider />
         <SideBarIcon icon={<FaInfoCircle size="28" />} text={"About Me 💡"} callBack={props.pshOnClick}/>
@@ -80,4 +80,28 @@ const SideBarIcon = ({ icon, text = 'tooltip 💡', callBack}) => {
 
 const Divider = () => <hr className="sidebar-hr dark:bg-gray-500" />;
 
-export default SideBar 
+export const sideBarWrapper = () => {
+
+
+    return(
+        <div className="drawer">
+            <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+                <p>Drawer content</p>
+                <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Open drawer</label>
+            </div>
+            <div className="drawer-side">
+                <label htmlFor="my-drawer" className="drawer-overlay"></label>
+                <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+
+                    <li><a>Sidebar Item 1</a></li>
+                    <li><a>Sidebar Item 2</a></li>
+
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+
+

@@ -43,7 +43,7 @@ for brevity and code reusability*/
   .main-container{
     @apply flex
     h-full w-screen z-0
-    
+    ml-16
     overflow-hidden;
   }
 
@@ -183,8 +183,8 @@ for brevity and code reusability*/
   }
 
   .channel-bar {
-    @apply w-80 h-auto m-0 ml-16 bg-gray-200 dark:bg-gray-800
-     overflow-hidden;
+    @apply w-80 h-auto m-0 bg-gray-200 dark:bg-gray-800
+     overflow-hidden ;
   }
 
   .channel-container {
