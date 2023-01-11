@@ -20,7 +20,7 @@ const TopNavigation = ({title}) => {
       <ThemeIcon />
       <Search />
       <BellIcon />
-      <UserCircle />
+      {/*<UserCircle />*/}
     </div>
   );
 };

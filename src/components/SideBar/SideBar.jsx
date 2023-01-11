@@ -35,15 +35,24 @@ export const SideBar = (props) => {
         <SideBarIcon icon={<BsFillLightningFill size="26" />} text={"Projects 💡"} callBack={props.pshOnClick}/>
         <SideBarIcon icon={<BsPersonLinesFill size="26" />} text={"Contact Info & Refrences 💡"} callBack={props.pshOnClick}/>
         <Divider />
-        <SideBarIcon icon={<BsGearFill size="22" />} text={"Settings 💡"} callBack={props.pshOnClick} />
-        <SideBarIcon icon={<FaFileDownload size="22" />} text={"Resumè 💡"} callBack={props.pshOnClick} />
-
+        {/*<SideBarIcon icon={<BsGearFill size="22" />} text={"Settings 💡"} callBack={props.pshOnClick} />*/}
+            <a               //this will save the file as "your_cv.pdf"
+                download="your_cv.pdf"
+                //put the path of your pdf file
+                href="/static/ConnorResume_2023_01_08"
+                //reactstrap classes. add green button
+            >
+        <SideBarIcon icon={<FaFileDownload size="22" />} text={"Download Résumé 💡"} callBack={()=>{console.log()}} />
+            </a>
         {/* <SideBarIcon icon={ThemeIcon} /> */}
         <ThemeIcon theme={props.theme} setTheme={props.setTheme} text={"Theme"}/>
         </div>
     )
 }; 
 
+const downloadResume = () => {
+
+}
 const ThemeIcon = (props) => {
     // const [darkTheme, setDarkTheme] = useDarkMode();
     let darkTheme = props.theme 
@@ -51,14 +60,17 @@ const ThemeIcon = (props) => {
     const handleMode = () => props.setTheme(!darkTheme);
     return (
         <div className="sidebar-icon group">
+                    <span className="sidebar-tooltip group-hover:scale-100">
+                    {"Theme 💡"}
+               </span>
       <span onClick={handleMode}>
-
         {darkTheme ? (
           <FaSun size='24' />
         ) : (
           <FaMoon size='24' />
         )}
       </span>
+
     </div>
 
     );
@@ -72,7 +84,7 @@ const SideBarIcon = ({ icon, text = 'tooltip 💡', callBack}) => {
 
     <div onClick={handleClick} className="sidebar-icon group">
         {icon}
-        <span class="sidebar-tooltip group-hover:scale-100">
+        <span className="sidebar-tooltip group-hover:scale-100">
             {text}
         </span>
     </div>

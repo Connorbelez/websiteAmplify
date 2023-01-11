@@ -8,9 +8,9 @@ import TopNav from "../TopNavigation/TopNav";
 const intro1 = "Hi there! Thank you for taking the time to checkout my website. My name is Connor Beleznay and I'm a 3rd year " +
     "Co-Op Student and TA at Carleton University pursing a Bachelors of Computer Science with Honors. Thus far my work experience" +
     " has been focused in the Embedded and IOT space, experience I gained through my 8 months at BlackBerry QNX on their Autonomous" +
-    "Vehicles team, and their Embedded Edge AI team. My time at Blackberry rounded out my high level software skills with a crash course" +
+    " Vehicles team, and their Embedded Edge AI team. My time at Blackberry rounded out my high level software skills with a crash course" +
     " in low level real time systems, hardware and robotics. Quite frankly I'm still figuring out exactly what subfield of software I want to " +
-    "dedicate my life to. As you'll see from my various projects and experience my interest range from IOT to ML/DL to Quant to embedded to autonmous robotics to fullstack " +
+    "dedicate my life to. As you'll see from my various projects and experience my interest range from IOT to ML/DL to Quant to embedded to autonomous robotics to fullstack " +
     "web development and I'm excited to be diving into distributed computing, cloud computing=. I'm a fanatically curious person, I'm compelled to leave no stone unturned once I start down techincal rabbit " +
     "holes. Simply put I'm happiest when I'm given a problem I don't yet know how to solve, a problem that leads to creative problem " +
     "solving and research that leads to new knowledge/skills. Indeed it was the creative problem solving and bottomless well of knowledge " +
@@ -61,13 +61,13 @@ export const ContentContainer = ({topic,setTopic,text}) => {
                 <Post name="Carleton Trap & Skeet Team" timestamp={3} text={h2} />
 
                 <Post name="Classic Car/Bike Restoration" timestamp={4} text={h3} />
-
-                <Post name="Miniature painting & Tabletop" timestamp={5} text={h1} />
-
-                <Post name="Philosophy" timestamp={5} text={h1} />
+                <img src={"ConnorDadMustang.jpg"} className="flex max-w-sm"/>
+                <Post name="Miniature painting & Tabletop" timestamp={5} text={"Under Construction"} />
+                <img src={'TableTop.png'} className="flex max-w-sm"></img>
+                <Post name="Philosophy" timestamp={5} text={"Under Construction"} />
             </div>
 
-            <BottomBar />
+
         </div>
     );
 
@@ -90,7 +90,7 @@ const Post = ({ name, timestamp, text, id}) => {
   return (
       <div className={'post'} id={name}>
       <div className='avatar-wrapper'>
-          <img src={`https://avatars.dicebear.com/api/open-peeps/${seed}.svg`} alt='' className='avatar' />
+          <img src={`CB2.ico`} alt='' className='avatar' />
       </div>
 
       <div className='post-content'>

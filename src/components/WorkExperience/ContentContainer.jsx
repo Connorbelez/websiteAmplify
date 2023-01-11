@@ -5,16 +5,16 @@ import TopNav from "../TopNavigation/TopNav";
 
 
 const title = "Applications Engineer - Autonomous Vehicles Team (04/2022-08/2022)\n\n Software Engineer - Embedded Edge AI Team (08/2022-01/2023)";
-const description = 'During my first term I led a team of 3 co-op engineers where we had full owner-\n' +
-    'ship over a project designed to give the FAE’s a mobile platform to demon-\n' +
-    'strate QNX’s capabilities in context of autonomous vehicles. I had a large\n' +
-    'degree of agency in what I wanted to work on and was allowed the freedom\n' +
-    'to design and implement complex systems. The second work term was a much different experience as I was placed on a\n' +
-    'team working on an actual product with an actual paying client that would\n' +
-    'be shown at CES 2. CES 2022 with a very real and very tight deadline.\n' +
-    'During this term I participated in weekly stand up meetings where sprint\n' +
-    'goals were assigned to me. Though I did not have the freedom to work on\n' +
-    'what I wanted, I did have the ability to make design decisions within my\n' +
+const description = 'During my first term I led a team of 3 co-op engineers where we had full owner' +
+    'ship over a project designed to give the FAE’s a mobile platform to demon' +
+    'strate QNX’s capabilities in context of autonomous vehicles. I had a large ' +
+    'degree of agency in what I wanted to work on and was allowed the freedom ' +
+    'to design and implement complex systems. The second work term was a much different experience as I was placed on a ' +
+    'team working on an actual product with an actual paying client that would ' +
+    'be shown at CES 2023, with a very real and very tight deadline. ' +
+    'During this term I participated in weekly stand up meetings where sprint ' +
+    'goals were assigned to me. Though I did not have the freedom to work on ' +
+    'what I wanted, I did have the ability to make design decisions within my ' +
     'limited scope, given I could justify them adequately.'
 
 
@@ -46,7 +46,7 @@ export const ContentContainer = ({topic,setTopic,text}) => {
 
             </div>
 
-            <BottomBar />
+            {/*<BottomBar />*/}
         </div>
     );
 
@@ -71,7 +71,7 @@ const Post = ({ name, timestamp, text, id, content}) => {
         return (
             <div className='post' id={name}>
                 <div className='avatar-wrapper'>
-                    <img src={`https://avatars.dicebear.com/api/open-peeps/${seed}.svg`} alt='' className='avatar'/>
+                    <img src={`CB2.ico`} alt='' className='avatar'/>
                 </div>
                 <div className='post-content'>
                     <p className='post-owner'>
@@ -86,7 +86,7 @@ const Post = ({ name, timestamp, text, id, content}) => {
         return (
         <div className='post' id={name}>
             <div className='avatar-wrapper'>
-            <img src={`https://avatars.dicebear.com/api/open-peeps/${seed}.svg`} alt='' className='avatar'/>
+            <img src={`CB2.ico`} alt='' className='avatar'/>
             </div>
         <div className='post-content'>
             <p className='post-owner'>

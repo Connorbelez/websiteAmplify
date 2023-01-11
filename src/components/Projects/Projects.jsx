@@ -12,19 +12,19 @@ import {SideBar} from "../SideBar/SideBar";
 const hds = [
     {
         h:"Personal Website",
-        s:["Intro","My Journey"]
+        s:["1. Tech Stack","1. Description","1. Demo"]
     },
     {
         h:"Virtual Tutor/Assitant",
-        s:["Carleton Trap & Skeet Team","Classic Car/Bike Restoration","Miniature Painting & Tabletop","Philosophy"]
+        s:["1. Tech Stack","1. Description","1. Demo"]
     },
     {
         h:"NLP for Email",
-        s:["Carleton Trap & Skeet Team","Classic Car/Bike Restoration","Miniature Painting & Tabletop","Philosophy"]
+        s:["1. Tech Stack","1. Description","1. Demo"]
     },
     {
         h:"Planned Projects",
-        s:["Rust Quant CLI","","Miniature Painting & Tabletop","Philosophy"]
+        s:["Rust Quant CLI","GPT-3 Notes App"]
     }
 
 ]

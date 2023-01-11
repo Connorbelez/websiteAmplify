@@ -12,7 +12,7 @@ import {SideBar} from "../SideBar/SideBar";
 const hds = [
     {
         h:"Contact",
-        s:["Email1","Email2","Github","LinkedIn"],
+        s:["Email 1","Email 2","Github","LinkedIn"],
     },
     {
         h:"Refrences",
