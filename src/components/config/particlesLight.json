@@ -1,9 +1,9 @@
 {
     "fullScreen": {
-        "enable": true,
+        "enable": false,
         "zIndex": 0
     },
-    "detectRetina": false,
+    "detectRetina": true,
     "fpsLimit": 120,
     "interactivity": {
         "events": {

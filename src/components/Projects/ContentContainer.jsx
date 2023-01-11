@@ -4,7 +4,6 @@ import ChannelBar from '../ChannelBar/CB';
 import TopNav from "../TopNavigation/TopNav";
 
 
-
 const intro1 = "Hi there! Thank you for taking the time to checkout my website. My name is Connor Beleznay and I'm a 3rd year " +
     "Co-Op Student and TA at Carleton University pursing a Bachelors of Computer Science with Honors. Thus far my work experience" +
     " has been focused in the Embedded and IOT space, experience I gained through my 8 months at BlackBerry QNX on their Autonomous" +
@@ -48,32 +47,30 @@ const h3 ="When I was 14 years old my father gave gifted me a frame from a 1976 
 
 
 export const ContentContainer = ({topic,setTopic,text}) => {
-    let t = topic;
-    return (
-        <div className='content-container1'>
-            <TopNav title={t}/>
-            <div className='content-list1'>
+let t = topic;
+return (
+    <div className='content-container1'>
+      <TopNav title={t}/>
+        <div className='content-list1'>
 
-                <Post name="Intro" timestamp={1} text={intro1} />
+            <Post name="Intro" timestamp={1} text={intro1} />
 
-                <Post name="My Journey" timestamp={2} text={MyJourney} />
+            <Post name="My Journey" timestamp={2} text={MyJourney} />
 
-                <Post name="Carleton Trap & Skeet Team" timestamp={3} text={h2} />
+            <Post name="Carleton Trap & Skeet Team" timestamp={3} text={h2} />
 
-                <Post name="Classic Car/Bike Restoration" timestamp={4} text={h3} />
+            <Post name="Classic Car/Bike Restoration" timestamp={4} text={h3} />
 
-                <Post name="Miniature painting & Tabletop" timestamp={5} text={h1} />
+            <Post name="Miniature painting & Tabletop" timestamp={5} text={h1} />
 
-                <Post name="Philosophy" timestamp={5} text={h1} />
-            </div>
-
-            <BottomBar />
+            <Post name="Philosophy" timestamp={5} text={h1} />
         </div>
-    );
+
+      <BottomBar />
+    </div>
+);
 
 };
-
-
 
 const BottomBar = () => (
 <div className='bottom-bar'>

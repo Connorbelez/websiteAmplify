@@ -7,6 +7,9 @@ import { ExampleComponent } from './TypeAnimation';
 import {About} from "../About/About";
 import TopNavigation from '../TopNavigation/TopNav';
 import {WorkExperience} from '../WorkExperience/WorkExperience';
+import {Projects} from "../Projects/Projects";
+import {Contact} from "../Contact/Contact";
+
 const MainContainer = (props) => {
   
     let cc = props.curComp
@@ -20,7 +23,7 @@ const MainContainer = (props) => {
             <BG theme={theme} comp={cc}/>
             <div>
               <h1 className="absolute z-2 flex-center w-auto py-1 bottom-2/3
-              font-bold mt-0 mb-4 inset-x-0 font-mono dark:text-green-500 text-black text-5xl
+              font-bold mt-0 ml-0 mb-4 ml-16 lg:text-5xl inset-x-0 font-mono dark:text-green-500 text-black text-4xl
                 text-center overflow-hidden leading-10 break-normal">
                 {s} 
                 </h1>
@@ -37,23 +40,16 @@ const MainContainer = (props) => {
       )
       case "Work Experience 💡":
         return (
-          <div className='main-container' id="MC">
           <WorkExperience />
-          </div>
+
       )
       case "Projects 💡":
         return (
-          <div className='main-container' id="MC">
-            <ChannelBar />            
-            <ContentContainer1></ContentContainer1>
-          </div>
+            <Projects />
       )
       case "Contact Info & Refrences 💡":
         return (
-          <div className='main-container' id="MC">
-            <ChannelBar />            
-            <ContentContainer1></ContentContainer1>
-          </div>
+            <Contact />
       )
       default:
         return (

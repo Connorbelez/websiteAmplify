@@ -11,25 +11,27 @@ import {SideBar} from "../SideBar/SideBar";
 
 const hds = [
     {
-        h:"1. BlackBerry QNX",
-        s:["1. Title","1. Description","1. Technologies","1. Accomplishments","1. Reflections"],
-        id:1
+        h:"Personal Website",
+        s:["Intro","My Journey"]
     },
     {
-        h:"2. TA - COMP2406 Web Dev",
-        s:["2. Title","2. Description","2. Responsibilities","2. Technologies","2. Accomplishments"],
-        id:2
+        h:"Virtual Tutor/Assitant",
+        s:["Carleton Trap & Skeet Team","Classic Car/Bike Restoration","Miniature Painting & Tabletop","Philosophy"]
     },
     {
-        h:"3. TA - COMP1405 Intro to CS",
-        s:["3. Title","3. Description","3. Responsibilities","3. Technologies","3. Accomplishments"],
-        id:3
+        h:"NLP for Email",
+        s:["Carleton Trap & Skeet Team","Classic Car/Bike Restoration","Miniature Painting & Tabletop","Philosophy"]
+    },
+    {
+        h:"Planned Projects",
+        s:["Rust Quant CLI","","Miniature Painting & Tabletop","Philosophy"]
     }
+
 ]
 
 
 
-export const WorkExperience = () => {
+export const Projects = () => {
 
     const [topic, setTopic] = useState("Intro");
 

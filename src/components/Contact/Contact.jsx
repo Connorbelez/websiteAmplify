@@ -11,25 +11,18 @@ import {SideBar} from "../SideBar/SideBar";
 
 const hds = [
     {
-        h:"1. BlackBerry QNX",
-        s:["1. Title","1. Description","1. Technologies","1. Accomplishments","1. Reflections"],
-        id:1
+        h:"Contact",
+        s:["Email1","Email2","Github","LinkedIn"],
     },
     {
-        h:"2. TA - COMP2406 Web Dev",
-        s:["2. Title","2. Description","2. Responsibilities","2. Technologies","2. Accomplishments"],
-        id:2
-    },
-    {
-        h:"3. TA - COMP1405 Intro to CS",
-        s:["3. Title","3. Description","3. Responsibilities","3. Technologies","3. Accomplishments"],
-        id:3
+        h:"Refrences",
+        s:["Erik Johnson - Senior Systems Engineer @ QNX", "Mike Shane - Senior Software Developer @ QNX","Michael Chalupa - Senior FAE @ QNX"]
     }
 ]
 
 
 
-export const WorkExperience = () => {
+export const Contact = () => {
 
     const [topic, setTopic] = useState("Intro");
 
@@ -47,7 +40,7 @@ export const WorkExperience = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ChannelBar channel={"About"} topic={topic} setTopic={setTopic} headers={hds}/>
+                    <ChannelBar channel={"Contact & Refs"} topic={topic} setTopic={setTopic} headers={hds}/>
 
                 </div>
             </div>

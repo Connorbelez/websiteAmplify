@@ -8,6 +8,7 @@ import {
     FaHashtag,
     FaRegBell,
     FaUserCircle,
+    FaHome,
     FaMoon,
     FaSun,
     FaFileDownload,
@@ -27,7 +28,7 @@ export const SideBar = (props) => {
                         bg-gray-100 text-gray-900  
                         dark:bg-gray-900 dark:text-white 
                         shadow-lg ">
-        <SideBarIcon className='z-1' icon={<FaFire size="28" />} text={"Home 💡"} callBack={props.pshOnClick}/>
+        <SideBarIcon className='z-1' icon={<FaHome size="28" />} text={"Home 💡"} callBack={props.pshOnClick}/>
         <Divider />
         <SideBarIcon icon={<FaInfoCircle size="28" />} text={"About Me 💡"} callBack={props.pshOnClick}/>
         <SideBarIcon icon={<FaBriefcase size="24" />} text={"Work Experience 💡"} callBack={props.pshOnClick}/>

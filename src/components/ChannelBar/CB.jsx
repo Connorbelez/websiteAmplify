@@ -7,17 +7,7 @@ const questions = ['jit-compilation', 'purge-files', 'dark-mode'];
 const random = ['variants', 'plugins'];
 
 
-function Headers({setTopic,topic,items,link}) {
 
-
-  return (
-    <div className='channel-container'>
-      {items.map(item => (
-        <Dropdown setTopic={setTopic} topic={topic} header={item.h} selections={item.s} />
-      ))}
-    </div>
-  );
-}
 
 
 const ChannelBar = ({topic,setTopic,headers,id}) => {
@@ -25,12 +15,24 @@ const ChannelBar = ({topic,setTopic,headers,id}) => {
   return (
     <div className='channel-bar shadow-lg'>
       <ChannelBlock />
-      <Headers setTopic={setTopic} topic={topic} items={headers} link={id}/>
+      <Headers setTopic={setTopic} topic={topic} headers={headers} link={id}/>
     </div>
   );
 };
 
-const Dropdown = ({ header, selections, setTopic, topic}) => {
+function Headers({setTopic,topic,headers,link}) {
+
+
+    return (
+        <div className='channel-container'>
+            {headers.map(item => (
+                <Dropdown setTopic={setTopic} topic={topic} header={item.h} selections={item.s} id={item.id} />
+            ))}
+        </div>
+    );
+}
+
+const Dropdown = ({ header, selections, setTopic, topic, id}) => {
   const [expanded, setExpanded] = useState(true);
 
     //===================================================================================================
@@ -52,7 +54,7 @@ const Dropdown = ({ header, selections, setTopic, topic}) => {
       </div>
       {expanded &&
         selections &&
-        selections.map((selection) => <TopicSelection selection={selection} setTopic={setTopic} />)}
+        selections.map((selection) => <TopicSelection selection={selection} setTopic={setTopic} id={id}/>)}
     </div>
   );
 };
@@ -66,7 +68,7 @@ const ChevronIcon = ({ expanded }) => {
   );
 };
 
-const TopicSelection = ({ selection, setTopic }) => {
+const TopicSelection = ({ selection, setTopic, id}) => {
     const [anchorTarget, setAnchorTarget] = useState(null);
 
     useEffect(() => {
@@ -75,6 +77,7 @@ const TopicSelection = ({ selection, setTopic }) => {
 
     const handleClick = event => {
         console.log("Handling click!");
+        document.getElementById('my-drawer-2').click();
         event.preventDefault();
         setTopic(selection);
         anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -83,6 +86,7 @@ const TopicSelection = ({ selection, setTopic }) => {
     return(
       <div className='dropdown-selection'>
         <BsHash size='24' className='text-gray-400' />
+
         <h5 className='dropdown-selection-text' onClick={handleClick}>{selection}</h5>
       </div>
 );
