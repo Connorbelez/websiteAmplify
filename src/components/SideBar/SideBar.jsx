@@ -37,7 +37,7 @@ export const SideBar = (props) => {
         <Divider />
         {/*<SideBarIcon icon={<BsGearFill size="22" />} text={"Settings 💡"} callBack={props.pshOnClick} />*/}
             <a               //this will save the file as "your_cv.pdf"
-                download="your_cv.pdf"
+                download="connorBeleznayResume.pdf"
                 //put the path of your pdf file
                 href="/static/ConnorResume_2023_01_08"
                 //reactstrap classes. add green button
