@@ -38,6 +38,7 @@ export const SideBar = (props) => {
                         flex flex-col z-40
                         bg-gray-100 text-gray-900  
                         dark:bg-gray-900 dark:text-white 
+
                         shadow-lg "
     >
       <SideBarIcon
@@ -90,6 +91,7 @@ export const SideBar = (props) => {
     </div>
   );
 };
+
 
 const downloadResume = () => {};
 const ThemeIcon = (props) => {
