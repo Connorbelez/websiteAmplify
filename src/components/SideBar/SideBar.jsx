@@ -92,7 +92,6 @@ export const SideBar = (props) => {
   );
 };
 
-
 const downloadResume = () => {};
 const ThemeIcon = (props) => {
   // const [darkTheme, setDarkTheme] = useDarkMode();
@@ -100,11 +99,15 @@ const ThemeIcon = (props) => {
 
   const handleMode = () => props.setTheme(!darkTheme);
   return (
-    <div className="sidebar-icon group">
+    <div className="sidebar-icon group"
+    onClick={handleMode}
+    >
       <span className="sidebar-tooltip group-hover:scale-100">
-        {"Theme 💡"}
+        {"Theme 💡"
+        
+        }
       </span>
-      <span onClick={handleMode}>
+      <span  >
         {darkTheme ? <FaSun size="24" /> : <FaMoon size="24" />}
       </span>
     </div>
