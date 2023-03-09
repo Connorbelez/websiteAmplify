@@ -39,7 +39,7 @@ export const SideBar = (props) => {
             <a               //this will save the file as "your_cv.pdf"
                 download="connorBeleznayResume.pdf"
                 //put the path of your pdf file
-                href="/static/ConnorResume_2023_01_08"
+                href="/static/ConnorBeleznayResume02032023"
                 //reactstrap classes. add green button
             >
         <SideBarIcon icon={<FaFileDownload size="22" />} text={"Download Résumé 💡"} callBack={()=>{console.log()}} />
