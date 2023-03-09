@@ -33,7 +33,7 @@ export const SideBar = (props) => {
         <SideBarIcon icon={<FaInfoCircle size="28" />} text={"About Me 💡"} callBack={props.pshOnClick}/>
         <SideBarIcon icon={<FaBriefcase size="24" />} text={"Work Experience 💡"} callBack={props.pshOnClick}/>
         <SideBarIcon icon={<BsFillLightningFill size="26" />} text={"Projects 💡"} callBack={props.pshOnClick}/>
-        <SideBarIcon icon={<BsPersonLinesFill size="26" />} text={"Contact Info & Refrences 💡"} callBack={props.pshOnClick}/>
+        <SideBarIcon icon={<BsPersonLinesFill size="26" />} text={"Contact Info & References 💡"} callBack={props.pshOnClick}/>
         <Divider />
         {/*<SideBarIcon icon={<BsGearFill size="22" />} text={"Settings 💡"} callBack={props.pshOnClick} />*/}
             <a               //this will save the file as "your_cv.pdf"
@@ -60,10 +60,10 @@ const ThemeIcon = (props) => {
     const handleMode = () => props.setTheme(!darkTheme);
     return (
         <div className="sidebar-icon group">
-                    <span className="sidebar-tooltip group-hover:scale-100">
+                    <span onClick={handleMode} className="sidebar-tooltip group-hover:scale-100">
                     {"Theme 💡"}
                </span>
-      <span onClick={handleMode}>
+      <span >
         {darkTheme ? (
           <FaSun size='24' />
         ) : (
