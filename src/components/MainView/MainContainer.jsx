@@ -15,7 +15,7 @@ const MainContainer = (props) => {
     let cc = props.curComp
     console.log("curComp: "+cc);
     let theme = props.theme;
-    let s = "<Connor Belenay/>";
+    let s = "<Connor Beleznay/>";
     switch (cc){
       case "Home 💡":
         return (
